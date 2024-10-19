@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                javac App.java
+                java App
             }
         }
     }
