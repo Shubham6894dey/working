@@ -2,9 +2,24 @@ pipeline {
     agent any
 
     stages {
-        stage('Compile') {
+        stage('Checkout') {
             steps {
-                java App
+                // Checkout code from Git repository
+                git 'https://github.com/Shubham6894dey/working'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // Compile the Java program
+                sh 'javac App.java'
+            }
+        }
+
+        stage('Run') {
+            steps {
+                // Run the Java program
+                sh 'java App'
             }
         }
     }
