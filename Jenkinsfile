@@ -12,14 +12,14 @@ pipeline {
         stage('Build') {
             steps {
                 // Compile the Java program
-                sh 'javac App.java'
+                bat 'javac App.java'
             }
         }
 
         stage('Run') {
             steps {
                 // Run the Java program
-                sh 'java App'
+                bat 'java App'
             }
         }
     }
