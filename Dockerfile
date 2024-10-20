@@ -10,5 +10,5 @@ COPY . /app
 # Compile the Java program
 RUN javac App.java
 
-# Run the Java program
+# Run the Java programe
 CMD ["java", "App"]
