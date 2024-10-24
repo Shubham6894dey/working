@@ -34,8 +34,7 @@ pipeline {
             steps {
                 // Run the Docker container
                 script {
-                    docker.image('demo-java-project').inside {
-                        sh 'java App'
+                    bat 'docker run --rm demo-java-project'
                     }
                 }
             }
