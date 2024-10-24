@@ -34,7 +34,7 @@ pipeline {
             steps {
                 // Run the Docker container
                 script {
-                    bat 'docker run demo-java-project'
+                    bat 'docker run --rm demo-java-project'
                 }
             }
         }
