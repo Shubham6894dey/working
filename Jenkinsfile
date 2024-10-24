@@ -22,5 +22,22 @@ pipeline {
                 bat 'java App'
             }
         }
+        stage('Build Docker Image') {
+            steps {
+                // Build the Docker image
+                script {
+                    docker.build('demo-java-project')
+                }
+            }
+        }
+
+        stage('Run Docker Container') {
+            steps {
+                // Run the Docker container
+                script {
+                    docker.image('demo-java-project').run('-d')
+                }
+            }
+        }
     }
 }
