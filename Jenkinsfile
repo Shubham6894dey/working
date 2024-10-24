@@ -26,7 +26,7 @@ pipeline {
             steps {
                 // Build the Docker image
                 script {
-                    docker.build('demo-java-project')
+                    bat 'docker build -t demo-java-project .'
                 }
             }
         }
