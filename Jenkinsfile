@@ -26,7 +26,7 @@ pipeline {
             steps {
                 // Build the Docker image
                 script {
-                    docker build ('demo')
+                    docker build ('app')
                 }
             }
         }
