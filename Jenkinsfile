@@ -26,19 +26,11 @@ pipeline {
             steps {
                 // Build the Docker image
                 script {
-                    bat 'docker build -t demo-java-project .'
+                    docker.build('demo-java-project')
                 }
             }
         }
-        stage('Run Docker Container') {
-            steps {
-                // Run the Docker container
-                script {
-                    bat 'docker run --rm demo-java-project'
-                    }
-                }
-            }
-        }
+        
 
         
     }
