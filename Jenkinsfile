@@ -26,7 +26,7 @@ pipeline {
             steps {
                 // Build the Docker image
                 script {
-                    docker build ('demo-java-project')
+                    docker.image('demo-java-project').run('-d')
                 }
             }
         }
