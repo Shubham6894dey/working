@@ -30,6 +30,14 @@ pipeline {
                 }
             }
         }
+        stage('Run Docker Container') {
+            steps {
+                // Run the Docker container
+                script {
+                    bat 'docker run demo-java-project'
+                }
+            }
+        }
         
 
         
